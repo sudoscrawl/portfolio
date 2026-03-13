@@ -1,0 +1,313 @@
+// Ultra-Sleek Modern Abstract Portfolio
+// Ayush Kumar | Designer-Engineer
+// Palette: Absolute Black, Stark White, Refined Violet (#8B5CF6)
+
+$bg-color: #000000;
+$text-primary: #FFFFFF;
+$text-secondary: #888888;
+$accent-color: #8B5CF6; 
+$border-color: #111111; // Ultra-subtle
+$font-main: 'Inter', sans-serif;
+$font-mono: 'JetBrains Mono', monospace;
+
+// Global Resets
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $bg-color;
+    color: $text-primary;
+    font-family: $font-main;
+    font-weight: 300;
+    line-height: 1.4;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: 1000px; // Slightly narrower for better reading
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+// Visual Depth
+.grid-overlay {
+    position: fixed;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, #ffffff01 1px, transparent 1px),
+        linear-gradient(to bottom, #ffffff01 1px, transparent 1px);
+    background-size: 80px 80px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+// Utilities
+.mono { font-family: $font-mono; }
+.small { font-size: 0.75rem; letter-spacing: 0.05em; }
+.text-secondary { color: $text-secondary; }
+.accent { color: $accent-color; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+.mt-3 { margin-top: 3rem; }
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+
+// Navbar (Ultra-Thin)
+.navbar-ultra-sleek {
+    padding: 1.5rem 0; // Reduced height
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    transition: 0.4s ease;
+
+    .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-weight: 500;
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: $text-primary;
+        letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2.5rem;
+
+        a {
+            text-decoration: none;
+            color: $text-secondary;
+            font-size: 0.75rem;
+            transition: 0.3s;
+
+            &:hover { color: $text-primary; }
+        }
+    }
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 6px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        z-index: 2000;
+
+        span {
+            display: block;
+            width: 20px;
+            height: 1px;
+            background-color: $text-primary;
+            transition: 0.3s;
+        }
+
+        &.active span:nth-child(1) { transform: translateY(3.5px) rotate(45deg); }
+        &.active span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
+    }
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: $bg-color;
+    z-index: 1500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+
+    &.active { visibility: visible; opacity: 1; }
+
+    .mobile-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+        
+        a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: $text-primary;
+            font-weight: 400;
+        }
+    }
+}
+
+// Hero (Left-Aligned, Balanced)
+.hero-modern-abstract {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid $border-color;
+
+    .hero-title {
+        font-size: clamp(2rem, 5vw, 3.5rem); // Reduced size
+        font-weight: 600;
+        letter-spacing: -0.03em;
+        margin: 0.5rem 0 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.15rem;
+        max-width: 500px;
+        line-height: 1.5;
+    }
+}
+
+// Sections
+section {
+    padding: 6rem 0;
+    border-bottom: 1px solid $border-color;
+}
+
+// About
+.about-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+
+    .body-text {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+}
+
+.minimal-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    
+    span {
+        color: $text-secondary;
+        &::before { content: '/ '; color: $accent-color; }
+    }
+}
+
+// Work
+.work-list {
+    .work-row {
+        display: grid;
+        grid-template-columns: 40px 1fr 100px;
+        padding: 2.5rem 0;
+        border-bottom: 1px solid $border-color;
+        transition: 0.3s;
+
+        &:first-child { border-top: 1px solid $border-color; }
+
+        &:hover {
+            .work-name { color: $accent-color; }
+        }
+
+        .work-name {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            transition: 0.3s;
+        }
+
+        .work-links a {
+            text-decoration: none;
+            color: $text-secondary;
+            &:hover { color: $text-primary; }
+        }
+    }
+}
+
+// Connect
+.connect-layout {
+    max-width: 700px;
+    
+    .connect-title {
+        font-size: 2.5rem;
+        font-weight: 600;
+        line-height: 1.2;
+    }
+}
+
+.connect-form-modern {
+    display: grid;
+    gap: 1.5rem;
+
+    input, textarea {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $border-color;
+        padding: 1rem 0;
+        color: $text-primary;
+        width: 100%;
+        outline: none;
+        transition: 0.3s;
+
+        &:focus { border-bottom-color: $text-primary; }
+    }
+
+    textarea { resize: none; margin-bottom: 1.5rem; }
+
+    .btn-ultra-sleek {
+        justify-self: start;
+        padding: 0.8rem 2.5rem;
+        background: $text-primary;
+        color: $bg-color;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover { background: $accent-color; color: #fff; }
+    }
+}
+
+// Footer
+.footer-ultra-sleek {
+    padding: 3rem 0;
+    
+    .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        
+        .footer-socials {
+            display: flex;
+            gap: 1.5rem;
+            a { text-decoration: none; color: inherit; &:hover { color: $text-primary; } }
+        }
+    }
+}
+
+// Minimal Reveal
+.reveal {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+// Responsive
+@media (max-width: 1024px) {
+    .about-layout { grid-template-columns: 1fr; gap: 1rem; }
+}
+
+@media (max-width: 768px) {
+    .navbar-ultra-sleek {
+        .nav-links { display: none; }
+        .hamburger { display: flex; }
+    }
+    .work-row { grid-template-columns: 1fr; gap: 1rem; }
+    .hero-modern-abstract .hero-title { font-size: 2rem; }
+}

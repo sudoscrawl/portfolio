@@ -1,48 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ayush Kumar</title>
-    <link rel="stylesheet" type="text/css" href="static/styles/output.css" />
-  </head>
-  <body>
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <p class="logo">ayush</p>
-        <ul class="nav-links">
-          <li><a href="#about">about</a></li>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#contact">contact</a></li>
-        </ul>
-      </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Kumar | Modern Designer-Developer</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Inter (Refined) + JetBrains Mono (Technical) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="absolute-black">
+    <div class="grid-overlay"></div>
+
+    <nav class="navbar-ultra-sleek">
+        <div class="container">
+            <div class="nav-content">
+                <a href="#" class="logo">Ayush Kumar</a>
+                <div class="nav-links mono">
+                    <a href="#about">ABOUT</a>
+                    <a href="#projects">WORK</a>
+                    <a href="#contact">CONTACT</a>
+                </div>
+                <button class="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-menu-overlay">
+            <div class="mobile-links">
+                <a href="#about">About</a>
+                <a href="#projects">Work</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
     </nav>
 
-    <section class="hero" id="hero">
-      <div class="hero-container">
-        <!-- <div class="profile-photo">
-          <img src="static/images/profile-photo.png" alt="" />
-        </div> -->
-        <div class="hero-content">
-          <h1>Hi, I am Ayush.</h1>
-          <p class="subtitle">Full-stack Developer</p>
-          <p class="location">Based in Delhi, India</p>
-          <div class="btn-grp">
-            <a href=".projects" class="btn-primary">View Projects</a>
-            <a href=".contact" class="btn-secondary">Get In Touch</a>
-          </div>
+    <main>
+        <header class="hero-modern-abstract" id="home">
+            <div class="container">
+                <div class="hero-inner reveal">
+                    <div class="hero-label mono small text-secondary mb-1">/STUDYING VISUAL LOGIC</div>
+                    <h1 class="hero-title">Ayush Kumar</h1>
+                    <p class="hero-subtitle text-secondary">Hobbyist programmer since 12. Currently 18, exploring the architecture of interactions and code-based aesthetics.</p>
+                </div>
+            </div>
+        </header>
+
+        <section class="about-modern" id="about">
+            <div class="container">
+                <div class="about-layout reveal">
+                    <div class="about-header">
+                        <h2 class="mono small-label">/01 BIO</h2>
+                    </div>
+                    <div class="about-content">
+                        <p class="body-text">I began building for the web at age 12. My practice has evolved into a study of how high-end design principles and technical implementation converge into seamless digital systems.</p>
+                        <div class="minimal-skills mono small mt-2">
+                            <span>REACT/NEXT.JS</span>
+                            <span>GOLANG</span>
+                            <span>TYPESCRIPT</span>
+                            <span>INTERACTION DESIGN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="work-modern" id="projects">
+            <div class="container">
+                <div class="work-header reveal mb-2">
+                    <h2 class="mono small-label">/02 WORK</h2>
+                </div>
+                <div class="work-list">
+                    <!-- Project -->
+                    <div class="work-row reveal">
+                        <div class="work-id mono small">01</div>
+                        <div class="work-info">
+                            <h3 class="work-name">Neural Core</h3>
+                            <p class="work-desc text-secondary small">Designer-centric analytics platform.</p>
+                        </div>
+                        <div class="work-links mono small">
+                            <a href="https://github.com/ayush/neural" target="_blank">GITHUB -></a>
+                        </div>
+                    </div>
+                    <!-- Project -->
+                    <div class="work-row reveal">
+                        <div class="work-id mono small">02</div>
+                        <div class="work-info">
+                            <h3 class="work-name">Ethos Cloud</h3>
+                            <p class="work-desc text-secondary small">Blockchain infrastructure research.</p>
+                        </div>
+                        <div class="work-links mono small">
+                            <a href="https://github.com/ayush/ethos" target="_blank">GITHUB -></a>
+                        </div>
+                    </div>
+                    <!-- Project -->
+                    <div class="work-row reveal">
+                        <div class="work-id mono small">03</div>
+                        <div class="work-info">
+                            <h3 class="work-name">Spectra</h3>
+                            <p class="work-desc text-secondary small">Custom visual patterns engine.</p>
+                        </div>
+                        <div class="work-links mono small">
+                            <a href="https://github.com/ayush/spectra" target="_blank">GITHUB -></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="connect-modern" id="contact">
+            <div class="container">
+                <div class="connect-layout reveal">
+                    <div class="connect-header">
+                        <h2 class="mono small-label">/03 CONNECT</h2>
+                        <h3 class="connect-title mt-1">Open for discussions <br>and research collaborations.</h3>
+                    </div>
+                    <form class="connect-form-modern mt-3">
+                        <input type="email" placeholder="Email Address" required class="mono small">
+                        <textarea placeholder="Message" rows="1" class="mono small"></textarea>
+                        <button type="submit" class="btn-ultra-sleek mono small">SEND_MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-ultra-sleek">
+        <div class="container">
+            <div class="footer-inner mono small text-secondary">
+                <span>AYUSH KUMAR // 2024</span>
+                <div class="footer-socials">
+                    <a href="#">TWITTER</a> // <a href="#">GITHUB</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
-    <section class="about" id="about">
-      <h1>Hello, world!</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
-        exercitationem adipisci aperiam doloremque consequuntur itaque dolor?
-        Reiciendis delectus sint eum cum, laborum, eveniet, accusantium facilis
-        maxime molestiae sit aperiam nobis veniam modi.
-      </p>
-    </section>
-    <script src="scripts/main.js" defer></script>
-  </body>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
 </html>
