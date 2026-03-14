@@ -1,6 +1,9 @@
-Designer-Developer Portfolio
+| ![](assets/bnnr.jpg) |
+| -------------------- |
 
-An ultra-sleek, modern, and architectural personal portfolio.
+# Designer-Developer Portfolio
+
+_An ultra-sleek, modern, and architectural personal portfolio._
 
 ## 🎨 Aesthetic & Design
 
