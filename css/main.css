@@ -231,6 +231,8 @@ section {
 
 .connect-layout {
   max-width: 700px;
+  display: grid;
+  gap: 1.5rem;
 }
 .connect-layout .connect-title {
   font-size: 2.5rem;
