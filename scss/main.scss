@@ -240,36 +240,18 @@ section {
     }
 }
 
-.connect-form-modern {
-    display: grid;
-    gap: 1.5rem;
 
-    input, textarea {
-        background: transparent;
-        border: none;
-        border-bottom: 1px solid $border-color;
-        padding: 1rem 0;
-        color: $text-primary;
-        width: 100%;
-        outline: none;
-        transition: 0.3s;
+.btn-ultra-sleek {
+    justify-self: start;
+    padding: 0.8rem 2.5rem;
+    background: $text-primary;
+    color: $bg-color;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
 
-        &:focus { border-bottom-color: $text-primary; }
-    }
-
-    textarea { resize: none; margin-bottom: 1.5rem; }
-
-    .btn-ultra-sleek {
-        justify-self: start;
-        padding: 0.8rem 2.5rem;
-        background: $text-primary;
-        color: $bg-color;
-        border: none;
-        cursor: pointer;
-        transition: 0.3s;
-
-        &:hover { background: $accent-color; color: #fff; }
-    }
+    &:hover { background: $accent-color; color: #fff; }
 }
 
 // Footer
